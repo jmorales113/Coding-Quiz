@@ -1,0 +1,19 @@
+body {
+    background-color: gray;
+}
+
+#timer{
+    float: right;
+    margin-right: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: gold;
+}
+
+#start-quiz {
+    display: block;
+    max-width: 300px;
+    margin: auto; 
+}
