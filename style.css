@@ -7,13 +7,50 @@ body {
     margin-right: 20px;
 }
 
+#quiz {
+    display: block;
+    max-width: 300px;
+    margin: auto; 
+    
+}
+
 h1 {
-    text-align: center;
+    
     color: gold;
+    
+}
+
+p1 {
+    color: purple;
+    
+}
+
+p2 {
+    color: gold;
+  
+}
+
+p3 {
+    color: purple;
+    
+}
+
+p4 {
+    color: gold;
+    
+}
+
+p5 {
+    color: purple;
+    text-align: center;
 }
 
 #start-quiz {
     display: block;
     max-width: 300px;
     margin: auto; 
+}
+
+.HideStartButton {
+    display: none;
 }
