@@ -49,12 +49,12 @@ function startTimer () {
         if (timeRemaining === 0){
             clearInterval(interval);
             document.querySelector("#ContainerTwo").setAttribute("style", "display: none")
-            document.querySelector("#ContainerThree").setAttribuate("style", "diplay: block")
+            document.querySelector("#ContainerThree").setAttribute("style", "diplay: block")
 
         } else if (currentQuestion === 5) {
             clearInterval(interval);
             document.querySelector("#ContainerTwo").setAttribute("style", "display: none")
-            document.querySelector("#ContainerFour").setAttribuate("style", "diplay: block")
+            document.querySelector("#ContainerFour").setAttribute("style", "diplay: block")
             score = ((score) * (timeRemaining));
 
             if (isNaN(score)) {
