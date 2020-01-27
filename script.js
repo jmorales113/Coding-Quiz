@@ -41,3 +41,31 @@ for (var i = 0; i < optionButton.length; i++ ) {
     });
 }
 
+function startTimer () {
+    var interval = setInterval(function() {
+        timeRemaining--;
+        document.querySelector("#timer").innerHTML = timeRemaining;
+    
+        if (timeRemaining === 0){
+            clearInterval(interval);
+            document.querySelector("#ContainerTwo").setAttribute("style", "display: none")
+            document.querySelector("#ContainerThree").setAttribuate("style", "diplay: block")
+
+        } else if (currentQuestion === 5) {
+            clearInterval(interval);
+            document.querySelector("#ContainerTwo").setAttribute("style", "display: none")
+            document.querySelector("#ContainerFour").setAttribuate("style", "diplay: block")
+            score = ((score) * (timeRemaining));
+
+            if (isNaN(score)) {
+                finalScore.innerHTML = "Your final score is : 0!";
+            } else {
+                endQuizMessage.innerHTML = "You have completed the quiz!";
+                finalScore.innerHTML = "Your final score is: " + score;
+            }
+        }
+    }, 1000)
+}
+
+
+
