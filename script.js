@@ -1,11 +1,23 @@
-var timer = 15;
-var interval = setInterval(function(){
-document.getElementById("timer").innerHTML = timer;
-timer--;
-if (timer === 0){
-    clearInterval(interval);
-    alert("Time's up!");
-}
-}, 1000);
+var startQuiz = document.querySelector("#start-quiz")
+var optionButton = document.querySelectorAll(".ChoiceButton")
+var timeRemaining = 75;
+var score = 0;
+var currentQuestion = 0
 
+startQuiz.addEventListener("click", function(event){
+    event.stopPropagation();
+    startTimer()
+    document.querySelector("#ContainerOne").style.display = "none";
+    document.querySelector("#ContainerTwo").style.display = "block";
+    displayQuestions();
+});
+
+function displayQuestions(){
+    var question = questions[currentQuestion];
+    document.querySelector("#title").innerHTML = question.title
+    document.querySelector("#ChoiceOne").innerHTML = question.options[0]
+    document.querySelector("#ChoiceTwo").innerHTML = question.options[1]
+    document.querySelector("#ChoiceThree").innerHTML = question.options[2]
+    document.querySelector("#ChoiceFour").innerHTML = question.options[3]
+}
 
