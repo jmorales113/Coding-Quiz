@@ -21,3 +21,23 @@ function displayQuestions(){
     document.querySelector("#ChoiceFour").innerHTML = question.options[3]
 }
 
+for (var i = 0; i < optionButton.length; i++ ) {
+    optionButton[i].addEventListener("click", function quizTaker(event) {
+        event.stopPropagation();
+
+        if (event.currentTarget.innerText === questions[currentQuestion].answer){
+            score++
+            document.querySelector("#Answer").innerHTML = "That's correct!"
+        } else { 
+            document.querySelector("#Answer").innerHTML = "That's wrong!"
+            timeRemaining = timeRemaining - 15;
+
+        }
+        currentQuestion++;
+
+        if (currentQuestion < 5){
+            displayQuestions()
+        }
+    });
+}
+
