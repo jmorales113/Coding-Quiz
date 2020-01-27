@@ -5,27 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Coding Quiz</title>
-    <script src = "script.js"></script>
-    <script src = "questions.js"></script>
     <link rel = "stylesheet" type = "text/css" href = "style.css">
 </head>
 <body>
     
     <div class = "navbar">
-        <button onclick = "getscore()" id = "view-highscore">View Highschore</button>
+        <button  id = "view-highscore">View Highschore</button>
         <div id = "timer">Time: 0</div>
     </div>
 
-    <div>   
-    <h1>Los Angeles Lakers Quiz Challenge</h1>
-    </div>
-
-    <div id = "quiz"></div>
-    <div id = "answers"></div>
+<div id = "quiz">
     
-    <div>
-    <button onclick="start()" id = "start-quiz">Start Quiz</button>
+   <div id = "container" class = "ContainerBox">
+
+        <div id= "ContainerOne">   
+            <h1>Los Angeles Lakers Quiz Challenge</h1>
+            <p1>You will be taking a timed quiz on the Los Angeles Lakers</p1>
+            <br>
+            <p2>You will have 75 seconds to answer 5 questions before the time runs out!</p2>
+            <br>
+            <p3>For every question answered correctly, you will receive 15 seconds of additional time.</p3>
+            <br>
+            <p4>However, for every question answered incorrectly, you will be deducted 15 seconds of time.</p4>
+            <br>
+            <p5>Best of luck and go Lakers!!!!!!!!!</p5>
+            <button  id = "start-quiz">Start Quiz</button>
+        </div>
+
+        <div id = "ContainerTwo" class = "HideStartButton">
+             <h1 id = "title"></h1>
+             <button id = "ChoiceOne" class = "OptionButton"></button>
+             <button id = "ChoiceTwo" class = "OptionButton"></button>
+            <button id = "ChoiceThree" class = "OptioneButton"></button>
+            <button id = "ChoiceFour" class = "OptionButton"></button>
+            <p id = "Answer"></p>
+        </div>
+
+        <div id = "ContainerThree" class = "HideStartButton">
+             <h1>You are out of time! Quiz Over!</h1>
+        </div>
+
+        <div id = "ContainerFour" class = "HideStartButton">
+            <h1 id = "endQuizMessage"></h1>
+            <h2 id = "finalScore"></h2>
+            <p>Please enter your name for the Leaderboards:</p>
+        </div> 
     </div>
+</div>
 
 </body>
+<script src = "script.js"></script>
+<script src = "questions.js"></script>
 </html>
