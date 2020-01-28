@@ -1,12 +1,15 @@
 var startQuiz = document.querySelector("#start-quiz")
-var optionButton = document.querySelectorAll(".ChoiceButton")
+var optionButton = document.querySelectorAll(".OptionButton")
+var endQuizMessage = document.querySelector("#endQuizMessage")
+var finalScore = document.querySelector("#finalScore")
 var timeRemaining = 75;
 var score = 0;
 var currentQuestion = 0
 
+
 startQuiz.addEventListener("click", function(event){
     event.stopPropagation();
-    startTimer()
+    startTimer();
     document.querySelector("#ContainerOne").style.display = "none";
     document.querySelector("#ContainerTwo").style.display = "block";
     displayQuestions();
@@ -14,7 +17,7 @@ startQuiz.addEventListener("click", function(event){
 
 function displayQuestions(){
     var question = questions[currentQuestion];
-    document.querySelector("#title").innerHTML = question.title
+    document.querySelector("#question").innerHTML = question.question
     document.querySelector("#ChoiceOne").innerHTML = question.options[0]
     document.querySelector("#ChoiceTwo").innerHTML = question.options[1]
     document.querySelector("#ChoiceThree").innerHTML = question.options[2]
@@ -33,10 +36,10 @@ for (var i = 0; i < optionButton.length; i++ ) {
             timeRemaining = timeRemaining - 15;
 
         }
-        currentQuestion++;
+            currentQuestion++;
 
         if (currentQuestion < 5){
-            displayQuestions()
+            displayOptions()
         }
     });
 }
