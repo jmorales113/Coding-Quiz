@@ -6,11 +6,12 @@ body {
     float: right;
     margin-right: 20px;
     color: gold;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 #quiz {
     display: block;
-    width: 75%;
+    width: 60%;
     margin: auto; 
     background-color: white;
     
@@ -19,44 +20,35 @@ body {
 h1 {
     
     color: gold;
+    font-family: Arial, Helvetica, sans-serif;
     
 }
 
-#Answer{
+#AnswerMessage{
     color: gold;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-p1 {
+p1, p3, p5 {
     color: purple;
-    
+    font-size: large; 
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-p2 {
+p2, p4 {
     color: gold;
-  
+    font-size: large;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
 }
 
-p3 {
-    color: purple;
-    
-}
-
-p4 {
-    color: gold;
-    
-}
-
-p5 {
-    color: purple;
-    text-align: center;
-}
 
 #start-quiz {
     display: block;
     max-width: 300px;
     margin: auto; 
     background-color: purple;
-    color: gold
+    color: gold;
+    font-family: Arial, Helvetica, sans-serif
 }
 
 .HideStartButton {
@@ -66,13 +58,24 @@ p5 {
 #view-highscore {
     background-color: purple;
     color: gold;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 h2 {
     color: gold;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 #ChoiceOne, #ChoiceTwo, #ChoiceThree, #ChoiceFour {
     background-color: purple;
     color: gold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  
 }
