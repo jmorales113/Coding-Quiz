@@ -12,10 +12,10 @@ startQuiz.addEventListener("click", function(event){
     startTimer();
     document.querySelector("#ContainerOne").style.display = "none";
     document.querySelector("#ContainerTwo").style.display = "block";
-    displayQuestions();
+    displayOptions();
 });
 
-function displayQuestions(){
+function displayOptions(){
     var question = questions[currentQuestion];
     document.querySelector("#question").innerHTML = question.question
     document.querySelector("#ChoiceOne").innerHTML = question.options[0]
@@ -29,18 +29,19 @@ for (var i = 0; i < optionButton.length; i++ ) {
         event.stopPropagation();
 
         if (event.currentTarget.innerText === questions[currentQuestion].answer){
-            score++
-            document.querySelector("#Answer").innerHTML = "That's correct!"
+            score++;
+            document.querySelector("#Answer").innerHTML = "That's correct!";
+            timeRemaining = timeRemaining + 15;
         } else { 
-            document.querySelector("#Answer").innerHTML = "That's wrong!"
+            document.querySelector("#Answer").innerHTML = "That's wrong!";
             timeRemaining = timeRemaining - 15;
 
         }
             currentQuestion++;
 
         if (currentQuestion < 5){
-            displayOptions()
-        }
+            displayOptions();
+            }
     });
 }
 
