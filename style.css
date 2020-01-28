@@ -5,12 +5,14 @@ body {
 #timer{
     float: right;
     margin-right: 20px;
+    color: gold;
 }
 
 #quiz {
     display: block;
-    max-width: 300px;
+    width: 75%;
     margin: auto; 
+    background-color: white;
     
 }
 
@@ -18,6 +20,10 @@ h1 {
     
     color: gold;
     
+}
+
+#Answer{
+    color: gold;
 }
 
 p1 {
@@ -49,8 +55,24 @@ p5 {
     display: block;
     max-width: 300px;
     margin: auto; 
+    background-color: purple;
+    color: gold
 }
 
 .HideStartButton {
     display: none;
+}
+
+#view-highscore {
+    background-color: purple;
+    color: gold;
+}
+
+h2 {
+    color: gold;
+}
+
+#ChoiceOne, #ChoiceTwo, #ChoiceThree, #ChoiceFour {
+    background-color: purple;
+    color: gold;
 }
