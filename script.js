@@ -8,7 +8,7 @@ var currentQuestion = 0
 
 
 startQuiz.addEventListener("click", function(event){
-    event.stopPropagation();
+    event.preventDefault();
     startTimer();
     document.querySelector("#ContainerOne").style.display = "none";
     document.querySelector("#ContainerTwo").style.display = "block";
@@ -26,14 +26,14 @@ function displayOptions(){
 
 for (var i = 0; i < optionButton.length; i++ ) {
     optionButton[i].addEventListener("click", function quizTaker(event) {
-        event.stopPropagation();
+        event.preventDefault();
 
         if (event.currentTarget.innerText === questions[currentQuestion].answer){
             score++;
-            document.querySelector("#Answer").innerHTML = "That's correct!";
+            document.querySelector("#AnswerMessage").innerHTML = "That's correct!";
             timeRemaining = timeRemaining + 15;
         } else { 
-            document.querySelector("#Answer").innerHTML = "That's wrong!";
+            document.querySelector("#AnswerMessage").innerHTML = "That's wrong!";
             timeRemaining = timeRemaining - 15;
 
         }
@@ -61,7 +61,7 @@ function startTimer () {
             document.querySelector("#ContainerFour").setAttribute("style", "diplay: block")
             score = ((score) * (timeRemaining));
 
-            if (isNaN(score)) {
+            if (parseFloat(score)) {
                 finalScore.innerHTML = "Your final score is : 0!";
             } else {
                 endQuizMessage.innerHTML = "You have completed the quiz!";
