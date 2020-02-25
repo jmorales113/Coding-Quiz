@@ -9,4 +9,6 @@ Task : Build a timer-based quiz application that stores high scores client-side 
 
 Deployed application: https://jmorales113.github.io/Homework4-CodingQuiz/
 
+![image](https://user-images.githubusercontent.com/57970306/75296318-ae321f80-57e1-11ea-9685-d4ea5075cac0.png)
+
 
