@@ -1,4 +1,4 @@
-# Homework4-Coding Quiz
+# Coding Quiz
 
 User Story: As a coding bootcamp student
 I want to take a timed quiz on JavaScript fundamentals that stores high scores
